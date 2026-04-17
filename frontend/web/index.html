@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memory Tiers Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Memory Tiers Demo</p>
+        <h1>Load the map before the code.</h1>
+        <p class="lede">
+          A tiny frontend and backend that exists only to demonstrate how Tier 1, Tier 2, and Tier 3 memory can guide an AI coding workflow.
+        </p>
+      </section>
+
+      <section class="summary" aria-label="Summary cards">
+        <article class="card">
+          <span class="label">Total</span>
+          <strong id="totalCount">0</strong>
+        </article>
+        <article class="card">
+          <span class="label">Done</span>
+          <strong id="doneCount">0</strong>
+        </article>
+        <article class="card">
+          <span class="label">Todo</span>
+          <strong id="todoCount">0</strong>
+        </article>
+        <article class="card">
+          <span class="label">Completion</span>
+          <strong id="completionRate">0%</strong>
+        </article>
+      </section>
+
+      <section class="controls">
+        <div class="filter-group" role="group" aria-label="Filter tasks">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="todo">Todo</button>
+          <button class="filter-button" data-filter="done">Done</button>
+        </div>
+        <p id="statusText" class="status-text">Loading tasks...</p>
+      </section>
+
+      <section>
+        <ul id="taskList" class="task-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

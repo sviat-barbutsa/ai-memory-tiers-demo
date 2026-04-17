@@ -1,0 +1,35 @@
+What not to do
+
+  Do not start by reading every source file.
+
+  This demo is small enough that you could do that, but the point of the repo is to demonstrate
+  a better pattern:
+
+  Tier 1 first, then Tier 2 if needed, then Tier 3 if needed, and only then raw code.
+
+Recommended workflow
+
+  1. Read DOCS/MEMORY/MEMORY.md
+  2. Read DOCS/MEMORY/SYSTEM_ARCHITECTURE.md
+  3. If the task is backend-wide, read DOCS/MEMORY/backend/BACKEND_MEMORY.md
+  4. If the task is frontend-wide, read DOCS/MEMORY/frontend/FRONTEND_MEMORY.md
+  5. If the task targets one area, read the matching Tier 3 file
+  6. Open only the source files required for implementation
+
+Quick examples
+
+  Task: "Add a new backend endpoint"
+    Read Tier 1
+    Read backend Tier 2
+    Read backend Tier 3
+    Then open backend/api/server.js
+
+  Task: "Change how the task cards render"
+    Read Tier 1
+    Read frontend Tier 2
+    Read frontend Tier 3
+    Then open frontend/web/app.js and frontend/web/styles.css
+
+Core rule
+
+  The agent should always know the system shape before it knows file details.
